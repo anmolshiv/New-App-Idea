@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2. Marketing Research</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1af4d931-7323-8037-87ae-c6b567b797ae" class="page sans"><header><h1 class="page-title">2. Marketing Research</h1><p class="page-description"></p></header><div class="page-body"><p id="1af4d931-7323-8069-9bb0-d3e61acdd405" class="">Global messaging apps. They Provide:</p><ol type="1" id="1af4d931-7323-80cc-84a6-fd1810c603c6" class="numbered-list" start="1"><li>Rich text , voice, video calling and emphasize privacy via end-to-end encryption.</li></ol><ol type="1" id="1af4d931-7323-807a-a473-dff2ea11b068" class="numbered-list" start="2"><li><strong>Telegram</strong>: Has a feature-ric platform, exceeds 700 million monthly users by mid-2022 and around 800 million by 2023.</li></ol><ol type="1" id="1af4d931-7323-80c3-a3c5-cd5145f02ccf" class="numbered-list" start="3"><li><strong>Signal</strong>: Has a privacy-centric model and has smaller but dedicated user-base (70 million active users) valued for its uncompromising security.</li></ol><p id="1af4d931-7323-80fa-9667-d0d90eb807a8" class="">
+</p><p id="1af4d931-7323-805c-9bee-f35492ad6abd" class=""><strong><span style="border-bottom:0.05em solid">we analyze these competitors across features, security models, monetization, user demographics, strengths/weaknesses, and emerging opportunities (AI integration, decentralization), with a focus on the Indian regulatory context.</span></strong></p><h1 id="1af4d931-7323-80de-bd6f-c30b2c124b67" class="">Features</h1><p id="1af4d931-7323-8045-a5f4-e56267727faa" class="">
+</p><p id="1af4d931-7323-8051-82a8-f4a40d297320" class="">Each app provides:</p><ul id="1af4d931-7323-8082-84d5-f1d02f31dfe6" class="bulleted-list"><li style="list-style-type:disc">Core messaging functionality(one-to-one and group chats, voice and video calls).</li></ul><ul id="1af4d931-7323-8063-ac8c-e488f89ac0ba" class="bulleted-list"><li style="list-style-type:disc">All three support text messaging with multimedia, voice notes and <a href="http://voice.video">v</a>oice/video calls(including group calls)</li></ul><p id="1af4d931-7323-8031-9cfd-d88c59cda1de" class="">
+</p><table id="1af4d931-7323-8042-a70a-ca5515d72d0c" class="simple-table"><tbody><tr id="1af4d931-7323-8089-9420-fd4b4946b9ab"><td id="U:nn" class=""></td><td id="pyiY" class="" style="width:139.453125px">WhatsApp</td><td id="ej;_" class="">Signal </td><td id="F:_?" class="">Telegram</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-80c5-96ff-ff18ff01e990"><td id="U:nn" class="">Voice and Video calls</td><td id="pyiY" class="" style="width:139.453125px">8 participants on video, 32 on voice</td><td id="ej;_" class="">Upto 40 participants</td><td id="F:_?" class="">Offers large group voice chats and broadcats(hundreds can listen, 30 can broadcast video upto 1000 viewers)</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-80a7-bf84-c7db5c32b0ae"><td id="U:nn" class="">Group chats </td><td id="pyiY" class="" style="width:139.453125px">Recently expanded group chats to 1024 members and introduced “Communities” (collection of groups) for broader forums)</td><td id="ej;_" class="">Support Groups upto 1000 members</td><td id="F:_?" class="">Offers massive groups upto 200,000 members(with discussion threads and admin tools), Channels for one-to-many broadcasts</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-8011-a696-d1f72279be78"><td id="U:nn" class="">File Sharing</td><td id="pyiY" class="" style="width:139.453125px">caps at ~100 MB for most media</td><td id="ej;_" class="">caps at ~100 MB too</td><td id="F:_?" class="">allows up to 2 GB files for free users(4 GB for premium subscribers)</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-80e2-925b-d9239d19329d"><td id="U:nn" class="">Extensive media features</td><td id="pyiY" class="" style="width:139.453125px">Share videos and photos, Send Video Notes, stickers and gifs, Emoji reactions</td><td id="ej;_" class="">Same as Whatsapp</td><td id="F:_?" class="">in-app video player, photo editor, animated stickers, sticker reactions</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-80b3-b191-e248dfb45be8"><td id="U:nn" class="">Message Deletion</td><td id="pyiY" class="" style="width:139.453125px">only allows deletion within 2 days</td><td id="ej;_" class="">only allows deletion for messages sent within 1 day</td><td id="F:_?" class="">Offers message editing or deletion without time limit</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-806a-9bb0-f870ad6da63c"><td id="U:nn" class="">Disappearing messages</td><td id="pyiY" class="" style="width:139.453125px">let users set chats to vanish by default after a timer</td><td id="ej;_" class="">let users set chats to vanish by default after a timer</td><td id="F:_?" class="">offers self-destruct timers (in Secret Chats) or auto-delete in any chat</td><td id="@\wD" class="">Auto delete after a set time are available on all three</td></tr><tr id="1af4d931-7323-8071-82bd-c918f993e710"><td id="U:nn" class="">Multi-Device Support</td><td id="pyiY" class="" style="width:139.453125px">historically tied to one phone, but now offers a linked devices feature (up to 4 devices) that works without the phone online</td><td id="ej;_" class="">allows desktop clients linked to a phone, but still lacks multi-phone support, as it prioritizes secure device binding (recent updates are improving multi-device usability)</td><td id="F:_?" class="">with seamless multi-device syncing – messages are cloud-based, allowing access from multiple phones, tablets, or desktops simultaneously</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-8028-bbe0-f92eae390d77"><td id="U:nn" class="">Identity and Social Features</td><td id="pyiY" class="" style="width:139.453125px">rely on phone numbers as identity</td><td id="ej;_" class="">rely on phone numbers as identity(recently introduced optional usernames to enhance privacy)</td><td id="F:_?" class="">rely on phone numbers and unique usernames .  allows usernames and lets users hide their phone numbers, enabling contact by alias – a privacy plus</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-805a-96fc-de461eb093bd"><td id="U:nn" class="">Stories/Status</td><td id="pyiY" class="" style="width:139.453125px">introduced Stories/Status updates (ephemeral posts visible to contacts) , Status feature is widely used for sharing updates among contacts</td><td id="ej;_" class="">introduced Stories/Status updates (ephemeral posts visible to contacts)</td><td id="F:_?" class="">added Stories in 2023 for users (first for Premium, now for all) to share temporary posts.</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-8087-b1dd-c3150d6e26f7"><td id="U:nn" class="">Bots and Integrations</td><td id="pyiY" class="" style="width:139.453125px">has a Business API and third-party chatbot integrations (especially for customer service), but user-facing bot experiences are limited.</td><td id="ej;_" class="">intentionally avoids bots on its platform (to minimize spam and attack surface).</td><td id="F:_?" class="">notable for its bot platform and third-party integrations – users can interact with AI chatbots, payment bots, games, and more within chats. This flexibility has attracted communities (e.g. crypto trading signals, news feeds) to build services on Telegram</td><td id="@\wD" class=""></td></tr><tr id="1af4d931-7323-8047-aeab-cce245f4f238"><td id="U:nn" class="">AI Integrations</td><td id="pyiY" class="" style="width:139.453125px">has begun integrating Meta’s AI assistant: users can chat with “Meta AI” for information, image generation, and more. WhatsApp’s Meta AI can explain topics in real-time via voice and even edit or answer questions about user-provided images</td><td id="ej;_" class="">focused on privacy, currently offers no AI chatbot or content suggestions – an intentional gap leaving room for future AI features that align with privacy (e.g. on-device AI for smart replies).</td><td id="F:_?" class="">does not have an official built-in AI chatbot, but its open bot API enabled community-made AI bots (some users access GPT-4 via Telegram bots). Telegram has started using AI in features like voice message transcription (a Premium feature that converts voice notes to text) and AI-powered sticker search to suggest relevant stickers.</td><td id="@\wD" class=""></td></tr></tbody></table><h1 id="1af4d931-7323-8066-8588-c79489e2f132" class="">Feature Comparison Table</h1><table id="1af4d931-7323-80a0-93e2-e06a90196487" class="simple-table"><tbody><tr id="1af4d931-7323-80b6-8208-fef42ec4b695"><td id=";EJu" class="">Feature</td><td id="s[i=" class="">WhatsApp</td><td id="IhaZ" class="">Telegram</td><td id="G&gt;q?" class="">Signal</td></tr><tr id="1af4d931-7323-80cc-bf60-ee13eddf55a1"><td id=";EJu" class="">Text &amp; Media Messaging</td><td id="s[i=" class="">Yes (with E2EE)</td><td id="IhaZ" class="">Yes (cloud chats &amp; Secret Chats)</td><td id="G&gt;q?" class="">Yes (E2EE)</td></tr><tr id="1af4d931-7323-80a3-9c90-c1732ec720db"><td id=";EJu" class="">Voice/Video Calls</td><td id="s[i=" class="">Yes (E2EE; group video ≤8)</td><td id="IhaZ" class="">Yes (1:1 encrypted; group calls/broadcasts)</td><td id="G&gt;q?" class="">Yes (E2EE; group calls ≤40)</td></tr><tr id="1af4d931-7323-80ec-89bc-f4445eac48a0"><td id=";EJu" class="">Max Group Size</td><td id="s[i=" class="">1024 members (Communities link groups)</td><td id="IhaZ" class="">200,000 members (large channels)</td><td id="G&gt;q?" class="">1000 members</td></tr><tr id="1af4d931-7323-803b-9751-c990f8b9b6fb"><td id=";EJu" class="">Disappearing Messages</td><td id="s[i=" class="">Yes (24 hrs to 90 days timer)</td><td id="IhaZ" class="">Yes (auto-delete timers)</td><td id="G&gt;q?" class="">Yes (user-defined timer)</td></tr><tr id="1af4d931-7323-8027-a63a-cbff139b7188"><td id=";EJu" class="">Message Edit/Delete</td><td id="s[i=" class="">Delete ≤2 days; no edit</td><td id="IhaZ" class="">Delete any time; Edit sent messages</td><td id="G&gt;q?" class="">Delete for all; no edit</td></tr><tr id="1af4d931-7323-80d9-b92a-cb14851cb3d9"><td id=";EJu" class="">Multi-Device</td><td id="s[i=" class="">Yes (4 linked devices beta)</td><td id="IhaZ" class="">Yes (multi-device sync via cloud)</td><td id="G&gt;q?" class="">Limited (phone + desktop links)</td></tr><tr id="1af4d931-7323-8011-994c-fe3c670e50a4"><td id=";EJu" class="">Stickers &amp; GIFs</td><td id="s[i=" class="">Yes (stickers, GIF search)</td><td id="IhaZ" class="">Yes (extensive, custom packs)</td><td id="G&gt;q?" class="">Yes (stickers, GIF search)</td></tr><tr id="1af4d931-7323-803f-99c1-d6947199495d"><td id=";EJu" class="">Usernames</td><td id="s[i=" class="">No (phone# only)</td><td id="IhaZ" class="">Yes (usernames &amp; anonymity options)</td><td id="G&gt;q?" class="">Partial (usernames introduced late 2022)</td></tr><tr id="1af4d931-7323-8092-8b68-c354c9e4b603"><td id=";EJu" class="">Bots &amp; API</td><td id="s[i=" class="">For Business (customer service bots)</td><td id="IhaZ" class="">Rich Bot API (3rd-party bots)</td><td id="G&gt;q?" class="">No public bot platform</td></tr><tr id="1af4d931-7323-80a3-a964-f32e109a5a5a"><td id=";EJu" class="">Storage/Backup</td><td id="s[i=" class="">Local backup (optional E2E cloud backup)</td><td id="IhaZ" class="">Cloud sync</td><td id="G&gt;q?" class="">Local encrypted backup</td></tr><tr id="1af4d931-7323-8024-b129-ef42ca80108f"><td id=";EJu" class="">Unique Features</td><td id="s[i=" class="">Status, Payments (India/Brazil), WhatsApp Web</td><td id="IhaZ" class="">Channels, Secret Chats, Custom themes</td><td id="G&gt;q?" class="">Sealed Sender, Relay calls, Stories</td></tr></tbody></table><h3 id="1af4d931-7323-80ae-a4a0-e92183202b31" class="">Detailed Security Analysis</h3><h3 id="1af4d931-7323-8044-85bf-c544f6d5e886" class="">Signal&#x27;s Approach</h3><p id="1af4d931-7323-80e4-b0bc-f398a0b829b2" class="">Signal sets the industry standard for secure messaging with several key features:</p><ul id="1af4d931-7323-803e-a129-f1ed9b9092b8" class="bulleted-list"><li style="list-style-type:disc">Complete end-to-end encryption for all communications (messages, calls, media)</li></ul><ul id="1af4d931-7323-8014-a9b3-f3a6fb1addbe" class="bulleted-list"><li style="list-style-type:disc">Zero-knowledge architecture - servers cannot access any message content</li></ul><ul id="1af4d931-7323-8027-a86a-e59396175da5" class="bulleted-list"><li style="list-style-type:disc">Minimal metadata collection - reduces digital footprint</li></ul><ul id="1af4d931-7323-80aa-84e0-f1fa9d9a4cf3" class="bulleted-list"><li style="list-style-type:disc">Advanced features like disappearing messages and sealed sender technology</li></ul><h3 id="1af4d931-7323-805d-af1a-dfa5eda2ba54" class="">WhatsApp&#x27;s Implementation</h3><p id="1af4d931-7323-801d-bb5f-e58327586bb8" class="">WhatsApp offers strong security but with some compromises:</p><ul id="1af4d931-7323-8008-9d2d-d1280703c8a7" class="bulleted-list"><li style="list-style-type:disc">Uses Signal&#x27;s proven encryption protocol for message content</li></ul><ul id="1af4d931-7323-80aa-9928-f0ccd8145c43" class="bulleted-list"><li style="list-style-type:disc">Collects more user data than Signal for functionality and business purposes</li></ul><ul id="1af4d931-7323-8003-9fbb-e3a3948ad029" class="bulleted-list"><li style="list-style-type:disc">Offers encrypted cloud backups but requires trust in cloud providers</li></ul><ul id="1af4d931-7323-80bc-b202-d507bd51ce27" class="bulleted-list"><li style="list-style-type:disc">Meta ownership raises some privacy concerns despite secure encryption</li></ul><h3 id="1af4d931-7323-80ef-a93f-e5bbcfaf0d21" class="">Telegram&#x27;s Hybrid Model</h3><p id="1af4d931-7323-80be-b18d-d50815d82aa1" class="">Telegram takes a different approach to balance features and security:</p><ul id="1af4d931-7323-807c-bd56-d8c2762ef3dd" class="bulleted-list"><li style="list-style-type:disc">Regular chats use client-server encryption stored in Telegram&#x27;s cloud</li></ul><ul id="1af4d931-7323-804d-8c9f-e8d26fc0592f" class="bulleted-list"><li style="list-style-type:disc">Secret Chats provide E2EE but aren&#x27;t available for groups</li></ul><ul id="1af4d931-7323-8050-8a90-f24858f19102" class="bulleted-list"><li style="list-style-type:disc">Custom MTProto protocol hasn&#x27;t received as much independent verification</li></ul><ul id="1af4d931-7323-803a-b5fd-fa848e3cba22" class="bulleted-list"><li style="list-style-type:disc">Cloud-based architecture enables features but introduces potential vulnerabilities</li></ul><h3 id="1af4d931-7323-8028-b4b5-f9a3615a6607" class="">Security Trade-offs Summary</h3><figure class="callout" style="white-space:pre-wrap;display:flex" id="1af4d931-7323-80f9-9336-f942673a9541"><div style="width:100%">Each platform makes distinct choices in balancing security, privacy, and user experience:<br/>- Signal prioritizes maximum security and minimal data collection<br/>- WhatsApp offers strong encryption but with more data collection<br/>- Telegram emphasizes features and accessibility over absolute security<br/></div></figure><h3 id="1af4d931-7323-8068-b6c0-f5266debca52" class="">Recommendations for Different Use Cases</h3><table id="1af4d931-7323-8026-a2f7-faa87fea74a2" class="simple-table"><tbody><tr id="1af4d931-7323-8058-945a-efe425076f97"><td id="\Zzg" class="">Use Case</td><td id="eiM?" class="">Recommended Platform</td><td id="Tl?x" class="">Reason</td></tr><tr id="1af4d931-7323-80bb-94ba-ca5da660a035"><td id="\Zzg" class="">Highly Sensitive Communications</td><td id="eiM?" class="">Signal</td><td id="Tl?x" class="">Maximum security, minimal data exposure</td></tr><tr id="1af4d931-7323-8043-834d-fdbc6067c2ce"><td id="\Zzg" class="">Regular Personal Use</td><td id="eiM?" class="">WhatsApp</td><td id="Tl?x" class="">Good security with widespread adoption</td></tr><tr id="1af4d931-7323-80ca-b78b-ecc2b37cc8e7"><td id="\Zzg" class="">Large Group Management</td><td id="eiM?" class="">Telegram</td><td id="Tl?x" class="">Better group features, acceptable security</td></tr></tbody></table><h2 id="1af4d931-7323-8095-a555-d08394e3a9d6" class="">Additional Security Features and Infrastructure</h2><h3 id="1af4d931-7323-80e9-8fe5-e0aacd82d07f" class="">Two-Factor Authentication and Device Security</h3><ul id="1af4d931-7323-8043-8e34-e989de854aeb" class="bulleted-list"><li style="list-style-type:disc">All platforms support two-factor authentication (2FA) or registration lock</li></ul><ul id="1af4d931-7323-80b5-86ea-e24da203b5c5" class="bulleted-list"><li style="list-style-type:disc">WhatsApp and Telegram use additional PIN for account login</li></ul><ul id="1af4d931-7323-8040-ab67-c4e61b4b74e8" class="bulleted-list"><li style="list-style-type:disc">Signal requires PIN for account restoration</li></ul><ul id="1af4d931-7323-80a0-910f-c5f79c7ce783" class="bulleted-list"><li style="list-style-type:disc">App lock features with passcode/biometrics available on WhatsApp and Signal</li></ul><ul id="1af4d931-7323-802b-8cce-c9dbecda137a" class="bulleted-list"><li style="list-style-type:disc">Telegram offers passlock and hidden chat features behind passcode</li></ul><h3 id="1af4d931-7323-8008-bc19-f0a886b2fce2" class="">Encryption Key Verification</h3><ul id="1af4d931-7323-80c2-ad2d-d7da551af6c3" class="bulleted-list"><li style="list-style-type:disc">All apps provide verification mechanisms for encryption keys</li></ul><ul id="1af4d931-7323-807d-bf05-fea47bb87f26" class="bulleted-list"><li style="list-style-type:disc">Safety numbers or security codes available for user comparison</li></ul><ul id="1af4d931-7323-8094-a447-f4cf295e60a1" class="bulleted-list"><li style="list-style-type:disc">Signal and WhatsApp notify users of contact key changes</li></ul><h3 id="1af4d931-7323-80ea-8682-ee53174d97f2" class="">Decentralization Status</h3><p id="1af4d931-7323-80a2-8c59-c01ce24f3f0f" class="">All three platforms currently use centralized architecture:</p><ul id="1af4d931-7323-80e1-a0bc-e3f037d41ed0" class="bulleted-list"><li style="list-style-type:disc">Rely on central servers for message routing</li></ul><ul id="1af4d931-7323-80d3-8fcb-c8d7bf9cafbc" class="bulleted-list"><li style="list-style-type:disc">Signal experiments with decentralized payments via cryptocurrency</li></ul><ul id="1af4d931-7323-802d-bcca-e2d202ae8c20" class="bulleted-list"><li style="list-style-type:disc">Telegram has shown interest through TON blockchain project</li></ul><ul id="1af4d931-7323-8024-abde-f99bbfaf6919" class="bulleted-list"><li style="list-style-type:disc">Centralization provides efficiency but creates single point of control</li></ul><h3 id="1af4d931-7323-8037-abf6-edf4d004e70c" class="">Global Privacy Compliance</h3><p id="1af4d931-7323-8051-8ab0-fe21137e3d6a" class="">Privacy regulation compliance varies across platforms:</p><ul id="1af4d931-7323-8035-b862-ea0d893e72ae" class="bulleted-list"><li style="list-style-type:disc">Signal: Minimal data retention policy - stores only join date and last active date</li></ul><ul id="1af4d931-7323-8059-8b08-d1ce87d283b5" class="bulleted-list"><li style="list-style-type:disc">WhatsApp: Updated policies to address data sharing with Meta</li></ul><ul id="1af4d931-7323-803c-b48d-f6f707e37a38" class="bulleted-list"><li style="list-style-type:disc">Telegram: May share limited data with authorities in serious crime cases</li></ul><figure class="callout" style="white-space:pre-wrap;display:flex" id="1af4d931-7323-8057-82ba-d85b06dc374f"><div style="width:100%">Security Hierarchy Summary:<br/>- Signal: Highest security with uncompromising, open-source model<br/>- WhatsApp: Strong default encryption using Signal&#x27;s protocol<br/>- Telegram: Feature-rich but less secure unless using Secret Chats<br/></div></figure><figure id="1af4d931-7323-8065-8a6b-e52af4ca1d19" class="link-to-page"><a href="1%20Study%20competitors%20and%20Analyze%20Features%201af4d931732380658a6be52af4ca1d19.html">1. Study competitors and Analyze Features</a></figure><figure id="1af4d931-7323-803c-a64f-ddacbb9ccb52" class="link-to-page"><a href="2%20UI%20UX,%20and%20user%20pain%20points%201af4d9317323803ca64fddacbb9ccb52.html">2. UI/UX, and user pain points</a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
